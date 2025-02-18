@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 228 30% 96%;
+    --foreground: 225 39% 13%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 225 39% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 225 39% 13%;
+
+    --primary: 227 47% 44%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 225 54% 67%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 228 23% 80%;
+    --muted-foreground: 225 39% 40%;
+
+    --accent: 225 54% 67%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 228 23% 85%;
+    --input: 228 23% 85%;
+    --ring: 227 47% 44%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 225 39% 13%;
+    --foreground: 228 30% 96%;
+
+    --card: 225 39% 15%;
+    --card-foreground: 228 30% 96%;
+
+    --popover: 225 39% 15%;
+    --popover-foreground: 228 30% 96%;
+
+    --primary: 227 47% 44%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 225 54% 67%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 225 39% 25%;
+    --muted-foreground: 228 23% 80%;
+
+    --accent: 225 54% 67%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 228 30% 96%;
+
+    --border: 225 39% 25%;
+    --input: 225 39% 25%;
+    --ring: 227 47% 44%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: none;
+  }
+}
+
+/* Add modern gradient backgrounds */
+.gradient-bg {
+  background: linear-gradient(135deg, hsl(227 47% 44%), hsl(225 54% 67%));
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, hsl(227 47% 44%), hsl(225 54% 67%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Add subtle hover effects */
+.hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(61, 82, 160, 0.1);
+}
+
+/* Add glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.parallax {
+  overflow: hidden;
+  letter-spacing: -2px;
+  line-height: 0.8;
+  margin: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax .scroller {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 64px;
+  display: flex;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax span {
+  display: block;
+  margin-right: 30px;
+}
+
